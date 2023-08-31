@@ -1,0 +1,12 @@
+#!/bin/bash
+for file in *.html; do
+    if [ -e "../$file" ]; then
+        current_time=$(stat -c %Y "$file")
+        parent_time=$(stat -c %Y "../$file")
+        if [ "$current_time" -gt "$parent_time" ]; then
+            cp "$file" "../$file"
+        fi
+    else
+        cp "$file" "../$file"
+    fi
+done
