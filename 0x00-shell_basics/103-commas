@@ -1,2 +1,2 @@
 #!/bin/bash
-(ls -Ap | grep -E -v '/$' | LC_ALL=C sort -d | tr '\n' ',') <<< $'\n'
+0 string SCHOOL School data file
